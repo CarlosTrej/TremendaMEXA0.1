@@ -5,7 +5,7 @@ margin: 0;
 box-sizing: border-box;
 }
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/TremendaMEXA0.1/src/images/images_index/tremendaMexa.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./../../images/images_index/tremendaMexa.jpg");
     height: 600px;
      display: flex;
     background-position: center;
