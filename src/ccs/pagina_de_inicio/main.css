@@ -1,0 +1,89 @@
+@import url('./Container.css');
+@import url('./hero.css');
+@import url('./titulo_1.css');
+@import url('./black-card.css');
+
+
+/* cards de los productos */
+.container{
+display:  flex;
+justify-content: center;
+flex-wrap: wrap;
+
+}
+.card{
+background:white ;
+width: 250px;
+height: 550px;
+ margin: 18px;
+ border-radius: 15px ;
+ 
+ }
+ 
+.card-image{
+background-color: aqua;
+height: 350px;
+margin-bottom: 15px;
+background-size: cover;
+border-radius: 15px 15px 0 0 ;
+
+
+}
+
+.car-1{
+background-image: url(/TremendaMEXA0.1/src/images/images_index/cortebasico\(TM\).png);
+
+}
+.car-2{
+    background-image: url(/TremendaMEXA0.1/src/images/images_index/CorteIndustria\(TM\).png);
+}
+
+.car-3{
+background-image: url(/TremendaMEXA0.1/src/images/images_index/CortedeLujo_p.png);
+
+}
+ .car-4{
+     background-image: url(/TremendaMEXA0.1/src/images/images_index/CortePremium.png);
+ }
+
+ .car-5{
+     background-image: url(/TremendaMEXA0.1/src/images/images_index/corteRes.png);
+ }
+
+#res{
+    padding: 6px;
+    text-align: center;
+    
+
+}
+.card h2{
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.card p{
+    text-align: center;
+    padding: 10px;
+}
+
+.card a{
+
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    text-align: center;
+    margin: 20px 50px;
+    text-decoration: none;
+}
+
+.card:hover{
+background-color: rgb(62, 62, 62);
+color: #1B9682;
+cursor: pointer;
+transform: scale(1.03);
+transition: all 0.1s ease;
+
+}
