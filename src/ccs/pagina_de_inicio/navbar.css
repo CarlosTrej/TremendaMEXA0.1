@@ -1,0 +1,13 @@
+.navbar-collapse .navbar-nav .nav-item .nav-link{
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: bold;
+}
+
+.navbar .navbar-brand{
+    font-weight: bold;
+}
+
+#navbarSupportedContent{
+    padding-top: 55px;
+}
