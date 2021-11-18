@@ -48,7 +48,6 @@ form.addEventListener("submit",function(e){
                 alertModal("Las contraseñas no son iguales");
                 passwordEq.value="";
             }else{
-                alertModal("Felicidades");
                 
                 /* evento.preventDefault(); */
                 let nameUs =document.getElementById("inputName").value;
@@ -63,8 +62,8 @@ form.addEventListener("submit",function(e){
                     "inputEmail":emailUs,
                     "inputPassword":passwordUs
                     }
-                    localStorage.setItem("newproduct",
-                    JSON.stringify(newProduct)
+                    localStorage.setItem("newUser",
+                    JSON.stringify(newUser)
                      )
 
                     console.info("save item on localstorage");
@@ -74,7 +73,11 @@ form.addEventListener("submit",function(e){
                      text: 'Guardado exitosamente!',
                
                     })
-                    alertModal("Felicidades");
+                    clearInputs(name,email,apellido,password,passwordEq);
+                   let usuario=localStorage.getItem('newUser');
+                   usuario=JSON.parse(usuario);
+                   console.log(usuario);
+                    alertModal("Felicidades Ya eres Mexa");
 
             }/* newUser */
                 
@@ -96,11 +99,11 @@ function alertModal(text){
       })
 }/* function alertModal */
 
-function clearInputs(name,email,message,phone){
+function clearInputs(name,email,apellido,password,passwordEq){
     name.value = "";
     email.value = "";
-    message.value = "";
-    phone.value = "";
+    apellido.value = "";
+    password.value = "";
+    passwordEq.value = "";
     email.classList.remove("is-invalid");
-    phone.classList.remove("is-invalid");
 }/* function clearInputs */
