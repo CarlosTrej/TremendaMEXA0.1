@@ -1,0 +1,49 @@
+#register {
+    background: white;
+    padding: 80px 0;
+  }
+  
+  @media (max-width:767px) {
+    .register {
+      padding: 20px 0;
+    }
+  }
+  
+  #register-form {
+    max-width: 480px;
+    width: 90%;
+    margin: 0 auto;
+    background-color: #1B9682;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: black;
+    color: black;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px 5px #000;
+  }
+  
+  @media (max-width:767px) {
+    #register form {
+      padding: 30px;
+    }
+  }
+
+#crear{
+    color:white/* #E9C9B2 */;
+    font-weight:bold;
+    background-color: black;
+}
+.illustration img{
+  width: 30%;
+  height: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+#register-form h2{
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
