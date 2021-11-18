@@ -39,7 +39,7 @@ btnCalc.addEventListener("click", function(e){
 
 }); /* btnCalc Action */
 
-const btnsDelete = document.querySelectorAll(".btn-delete");
+const btnsDelete = document.querySelectorAll(".btn-danger");
 btnsDelete.forEach(function(button){
     button.addEventListener("click", function(e){
         console.dir(e.currentTarget);
