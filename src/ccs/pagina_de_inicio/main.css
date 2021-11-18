@@ -36,23 +36,23 @@ border-radius: 15px 15px 0 0 ;
 }
 
 .car-1{
-background-image: url(/TremendaMEXA0.1/src/images/images_index/cortebasico\(TM\).png);
+background-image: url(/src/images/images_index/cortebasico\(TM\).png);
 
 }
 .car-2{
-    background-image: url(/TremendaMEXA0.1/src/images/images_index/CorteIndustria\(TM\).png);
+    background-image: url(/src/images/images_index/CorteIndustria\(TM\).png);
 }
 
 .car-3{
-background-image: url(/TremendaMEXA0.1/src/images/images_index/CortedeLujo_p.png);
+background-image: url(/src/images/images_index/CortedeLujo_p.png);
 
 }
  .car-4{
-     background-image: url(/TremendaMEXA0.1/src/images/images_index/CortePremium.png);
+     background-image: url(/src/images/images_index/CortePremium.png);
  }
 
  .car-5{
-     background-image: url(/TremendaMEXA0.1/src/images/images_index/corteRes.png);
+     background-image: url(/src/images/images_index/corteRes.png);
  }
 
 #res{
