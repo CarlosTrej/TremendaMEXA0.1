@@ -1,6 +1,6 @@
 #addcard {
     max-width: 480px;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     background-color: #1B9682;
     padding: 40px;
@@ -12,9 +12,7 @@
   }
   
   @media (max-width:767px) {
-    #addcard {
-      padding: 30px;
-    }
+   
   }
 
 #añadir{
