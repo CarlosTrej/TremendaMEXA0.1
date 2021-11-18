@@ -1,0 +1,113 @@
+.team-boxed {
+    color: #313437;
+  }
+  .team-boxed p {
+    color:black;
+    font-weight: bold;
+  }
+  .team-boxed .intro .text-center h2 {
+    font-weight: bold;
+    padding: 60px;
+    color: inherit;
+    font-size: 40px;
+  }
+  .team-boxed .intro {
+    padding-top: 60px;
+    padding-bottom: 15px;
+    font-size: 16px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .team-boxed .intro h1 {
+    margin-bottom: 25px;
+      padding-top: 25px;
+      text-align: left;
+      font-weight: bold;
+  }
+  .team-boxed .intro p {
+    margin-bottom: 0;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .team-boxed .people {
+    padding: 50px 0;
+  }
+  .team-boxed .item {
+    text-align: center;
+  }
+  
+  .team-boxed .item .box {
+    text-align: center;
+    padding: 30px;
+    background-color:#fff;
+    margin-bottom: 30px;
+  }
+  #object-position-1 {
+    object-position:center;
+  }
+  .team-boxed .item .name {
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    color: inherit;
+  }
+  
+  .team-boxed .item .title {
+    text-transform: uppercase;
+    font-weight: bold;
+    color:#4b565c;
+    letter-spacing: 2px;
+    font-size: 12px;
+  }
+  .team-boxed .item .description {
+    font-size: 13px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+  }
+  
+  .team-boxed .item img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .team-boxed .container .row .description {
+    text-align:start;
+  }
+  .team-boxed .social {
+    font-size: 33px;
+    color:#fff;
+  }
+  
+  .team-boxed .social a {
+    color: inherit;
+    margin: 0 10px;
+    display: inline-block;
+    
+  }
+  .team-boxed .social a:hover {
+    opacity: 60%;
+  }
+  .team-boxed .container .intro p {
+    animation-duration: 6s;
+    animation-name:slidein;
+  }
+  .team-boxed .container .intro p {
+    animation-name:animTexto; 
+    animation-duration: 6s;
+    animation-delay:1.5s;
+  
+  }
+  @keyframes animTexto {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
