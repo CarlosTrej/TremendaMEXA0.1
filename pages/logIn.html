@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="./../src/ccs/pagina_de_inicio/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.0/font/bootstrap-icons.css">
+
+</head>
+
+<body id="fondo">
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(0, 0,0, 0)">
+    <a class="navbar-brand" href="./../index.html">
+        <img src="./../src/images/logoTremenda.png" width="60" height="60" alt="">
+      </a>
+    <a class="navbar-brand" style="margin-right: 1cm;" href="./../index.html">TremendaMexa</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link"style="margin: right 1cm;" href="./../index.html">Inicio <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="./pages/contactoForm.html">Contacto</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+            Productos
+          </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="./pages/cardTienda.html">Bolsas y Mandiles</a>
+            <a class="dropdown-item" href="./pages/cardTienda.html">Café</a>        
+           </div>
+        </li>
+        <li class="nav-item"><a class="nav-link" style="margin-right: 1cm;" href="./pages/acercaDeNosotros.html">Nosotros</a></li>
+        <li class="nav-item dropdown" style="margin-right: 7cm;" style="list-style: none;">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i class="bi bi-person-fill" style ="width: 150%; height:150%;" id="carrito"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="./logIn.html">Iniciar sesión </a>
+            <a class="dropdown-item" href="./pages/registro.html">Registrar</a>
+            <li  class="nav-item active" >
+              <a  class="nav-link" href="./carritoCompras.html"><i  style="margin-right: 1cm;"class="bi bi-cart4" id="carrito"> 
+              </i>
+              </a>
+              </li>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav> <!-- nav -->
+    <section class="contact-clean">
+        <form method="post" id="formLogin">
+            <center><h2 class="visually-hidden">Inicio de Sesión</h2></center>
+            <div class="illustration"><img src="https://res.cloudinary.com/rookiesquad/image/upload/c_scale,w_131/v1636851780/logoTremenda_sr7bxu.png" style="width: 30%; height: 30%"></div>
+            <div class="mb-3"><input class="form-control" id="email" type="email" name="email" placeholder="Correo electrónico" ></div>
+            <div class="mb-3"><input class="form-control" id="password" type="password" name="password" placeholder="Contraseña" ></div>
+            <div class="mb-3"><button class="btn btn-outline-light w-100" type="submit" style="background-color: black;">Ingresar</button></div><a class="forgot" href="#">¿Olvidaste tu contraseña o correo electrónico?</a>
+        </form>
+    </section>
+    
+    <footer>
+      <div class="container_footer">
+          <div class="box__footer">
+              <div class="logo">
+                  <img src="./../src/images/logo2.0.png" alt="">
+              </div>
+              <div class="terms">
+              </div>
+          </div>
+          <div class="box__footer">
+              <h2><a href="/pages/acercaDeNosotros.html"> Nosotros</a></h2>
+          </div>
+          <div class="box__footer">
+              <h2><a href="/pages/cardTienda.html"> Productos</a> </h2>  
+          </div>
+          <div class="box__footer">
+              <h2>Redes Sociales</h2>
+              <a href="https://www.facebook.com/tremendaMexa"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/tremendamexa/"><i class="bi bi-instagram"></i></a>
+          </div>
+      <div class="box__copyright">
+          <hr>
+          <p>Todos los Derechos Reservados  2021 <b>Tremenda Mexa</b></p>
+      </div>
+</footer><!-- footer -->
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="./../src/js/logIn.js"></script>
+<script src="./../node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+
+</html>
