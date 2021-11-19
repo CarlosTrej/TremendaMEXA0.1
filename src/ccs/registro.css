@@ -1,5 +1,5 @@
 #register {
-    background: white;
+    background: #FEFCF7;
     padding: 80px 0;
   }
   
@@ -13,7 +13,7 @@
     max-width: 480px;
     width: 90%;
     margin: 0 auto;
-    background-color: #1B9682;
+    background-color: #0E8784;
     padding: 40px;
     border-radius: 10px;
     box-shadow: black;
@@ -46,4 +46,5 @@
   text-align: center;
   font-size: 36px;
   margin-bottom: 20px;
+  font-family: 'Fraunces', serif;
 }
