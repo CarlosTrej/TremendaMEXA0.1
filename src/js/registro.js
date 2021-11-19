@@ -48,36 +48,11 @@ form.addEventListener("submit",function(e){
                 alertModal("Las contraseñas no son iguales");
                 passwordEq.value="";
             }else{
+                saveUser(newUser);
                 
-                /* evento.preventDefault(); */
-                let nameUs =document.getElementById("inputName").value;
-                let apellidoUS =document.getElementById("inputApellido").value;
-                let emailUs =document.getElementById("inputEmail").value;
-                let passwordUs =document.getElementById("inputPassword").value;
-               /*  let price =document.getElementById("price_product").value; */
-                //console.log(name);price_product
-                let newUser={
-                    "inputName":nameUs,
-                    "inputApellido":apellidoUS,
-                    "inputEmail":emailUs,
-                    "inputPassword":passwordUs
-                    }
-                    localStorage.setItem("newUser",
-                    JSON.stringify(newUser)
-                     )
-
-                    console.info("save item on localstorage");
-                    new Swal({
-                     icon: 'success',
-                     title: 'Success...',
-                     text: 'Guardado exitosamente!',
-               
-                    })
-                    clearInputs(name,email,apellido,password,passwordEq);
-                   let usuario=localStorage.getItem('newUser');
-                   usuario=JSON.parse(usuario);
-                   console.log(usuario);
-                    alertModal("Felicidades Ya eres Mexa");
+                clearInputs(name,email,apellido,password,passwordEq);
+                   
+                alertModal("Felicidades Ya eres Mexa");
 
             }/* newUser */
                 
@@ -107,3 +82,40 @@ function clearInputs(name,email,apellido,password,passwordEq){
     passwordEq.value = "";
     email.classList.remove("is-invalid");
 }/* function clearInputs */
+
+function saveUser(newUser){
+    /* evento.preventDefault(); */
+    let nameUs =document.getElementById("inputName").value;
+    let apellidoUS =document.getElementById("inputApellido").value;
+    let emailUs =document.getElementById("inputEmail").value;
+    let passwordUs =document.getElementById("inputPassword").value;
+   /*  let price =document.getElementById("price_product").value; */
+    //console.log(name);price_product
+    let newUser={
+        "nombre":nameUs,
+        "apellido":apellidoUS,
+        "correo":emailUs,
+        "contraseña":passwordUs
+        }
+    let usuario=localStorage.getItem('newUser');
+    usuario=JSON.parse(usuario);
+    console.log(usuario);
+    let listaUsuario;
+
+    if(usuario){
+        listaUsuario= JSON.parse(usuario)
+        listaUsuario.push(newUser);
+        console.log(listaUsuario)
+        window.localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario));
+        nombre= '';
+        apellido= '';
+        correo= '';
+        contraseña= '';
+        console.log("Ya esta registrado")
+    }else{
+        console.log("lo siento")
+        /* window.localStorage.setItem("listaUsuario",JSON.stringify(ShirtBase));
+        valueInLocalStorage= ShirtBase */
+    }
+       
+}
