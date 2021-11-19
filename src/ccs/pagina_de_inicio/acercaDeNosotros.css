@@ -44,6 +44,7 @@
     padding: 30px;
     background-color:#FEFCF7;
     margin-bottom: 30px;
+    
   }
   #object-position-1 {
     object-position:center;
@@ -82,9 +83,6 @@
     padding-top: 15px;
   }
  
-  /* #txt-a{
-    padding: 5px;
-  } */
   .team-boxed .social {
     font-size: 33px;
     color:#FEFCF7;
