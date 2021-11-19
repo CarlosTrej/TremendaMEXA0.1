@@ -13,7 +13,7 @@
 
 footer{
     width: 100%;
-    padding: 50px 0px;
+    padding: 0px 0px;
     background-size: cover;
     background:rgb(0, 0, 0) ;
     display:flex ;
@@ -26,12 +26,13 @@ footer{
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 80px;
+    
 }
 .box__footer{
     display: flex;
     flex-direction: column;
-    padding: 40px
+    padding: 30px
 }
 
 .box__footer .logo img{
@@ -39,7 +40,7 @@ footer{
 }
 .box__footer .terms{
     max-width: 350px;
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: 500;
     color: #0E8784;
     font-size: 18px;
@@ -47,15 +48,15 @@ footer{
 
 .box__footer  h2{
  
-    margin-bottom: 30px;
-    color:#0E8784;
+    margin-bottom: 20px;
+    color:#1B9682;
     font-weight: 700;
     font-family: 'Fraunces', serif;
 }
 
 .box__footer a{
-    margin-top: 10px;
-    color:#0E8784;
+    margin-top: 5px;
+    color:#1B9682;
     font-weight: 600;
 }
 
@@ -73,8 +74,8 @@ footer{
     padding: 0px, 40px;
 }
 .box__copyright p{
-    margin-top: 20px;
-    color:#0E8784;
+    margin-top: 10px;
+    color:#1B9682;
 }
 .box__copyright hr{
     height: 1px;
