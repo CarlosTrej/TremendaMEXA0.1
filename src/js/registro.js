@@ -48,11 +48,19 @@ form.addEventListener("submit",function(e){
                 alertModal("Las contraseñas no son iguales");
                 passwordEq.value="";
             }else{
-                saveUser(newUser);
-                
+                obtener_localStorage();
+                guadar_localStorage();
+                new Swal({
+                     icon: 'success',
+                     title: 'Success...',
+                     text: 'Guardado exitosamente!',
+               
+                })
+                    
+                /*  guardaUs(); */
+                /* guadar_localStorage(); */
                 clearInputs(name,email,apellido,password,passwordEq);
-                   
-                alertModal("Felicidades Ya eres Mexa");
+                alertModal("Felicidades");
 
             }/* newUser */
                 
@@ -81,41 +89,61 @@ function clearInputs(name,email,apellido,password,passwordEq){
     password.value = "";
     passwordEq.value = "";
     email.classList.remove("is-invalid");
+    /* phone.classList.remove("is-invalid"); */
 }/* function clearInputs */
 
-function saveUser(newUser){
-    /* evento.preventDefault(); */
-    let nameUs =document.getElementById("inputName").value;
-    let apellidoUS =document.getElementById("inputApellido").value;
-    let emailUs =document.getElementById("inputEmail").value;
-    let passwordUs =document.getElementById("inputPassword").value;
-   /*  let price =document.getElementById("price_product").value; */
-    //console.log(name);price_product
-    let newUser={
-        "nombre":nameUs,
-        "apellido":apellidoUS,
-        "correo":emailUs,
-        "contraseña":passwordUs
-        }
-    let usuario=localStorage.getItem('newUser');
-    usuario=JSON.parse(usuario);
-    console.log(usuario);
-    let listaUsuario;
+function guadar_localStorage() {
+    //Obtenemos los valores del html.
+    let id = document.getElementById("inputEmail").value;
+    let clave = document.getElementById("inputPassword").value;
 
-    if(usuario){
-        listaUsuario= JSON.parse(usuario)
-        listaUsuario.push(newUser);
-        console.log(listaUsuario)
-        window.localStorage.setItem("listaUsuario",JSON.stringify(listaUsuario));
-        nombre= '';
-        apellido= '';
-        correo= '';
-        contraseña= '';
-        console.log("Ya esta registrado")
-    }else{
-        console.log("lo siento")
-        /* window.localStorage.setItem("listaUsuario",JSON.stringify(ShirtBase));
-        valueInLocalStorage= ShirtBase */
+    //Si el id existe en el localStorage vamos a comprobar la clave
+    if (id in localStorage) {
+        //Si la clave coincide le permitimos el acceso.
+        if (clave == localStorage.getItem(id)) {
+            location.href="newregister.html";
+        }
+        //Si la clave no concuerda, le informamos de que no es correcta.
+        else {
+            alert("Su contraseña es incorrecta.");
+        }
     }
-       
+    else { 
+        //Si el id no se encuentra, le preguntamos si quiere agregarlo.
+        let answer = prompt("Su Id y pass no se encuentran registrado desea guardarlos (S/N)");
+            if (answer == 's' || answer == 'S') {
+                localStorage.setItem(id,clave);
+                document.getElementById("inputEmail").value = "";
+                document.getElementById("inputPassword").value = "";
+            }
+    }
+}
+function obtener_localStorage(){
+    if(localStorage.getItem("usuario")){
+        //existe un registro en el localStorage
+        let newUser=JSON.parse(localStorage.getItem("usuario"));
+        console.log("usuario");
+    }else{
+        console.log("no hay ");
+        /* localStorage.setItem("newUser",JSON.stringify()) */
+        guadar_localStorage();
+        console.log("se guardo");
+    }
+}
+function guadar_localStorage(){
+    let nameUs = document.getElementById("inputName").value;
+    let apellidoUS = document.getElementById("inputApellido").value;
+    let emailUs = document.getElementById("inputEmail").value;
+    let passwordUs = document.getElementById("inputPassword").value;
+
+    let usuario={
+        "nombre":nameUs,
+        "Apellido":apellidoUS,
+        "Email":emailUs,
+        "Password":passwordUs
+    }
+    let listaUsuario = JSON.parse(localStorage.getItem("usuario")) || [];
+    listaUsuario.push(usuario);
+    let listaUsuarioJSON = JSON.stringify(listaUsuario);
+    localStorage.setItem("usuario",listaUsuarioJSON);
 }
