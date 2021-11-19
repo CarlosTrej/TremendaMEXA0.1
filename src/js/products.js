@@ -4,7 +4,7 @@ let text= `[{"id":1,"name":"Café Orgánico",
  "size": "Presentación 500gr", "costo":"180.00"},{"id":2,"name":"Café Tostado Orgánico", 
 "img":"https://res.cloudinary.com/rookiesquad/image/upload/v1636499945/253144600_900585757496627_3781751932014693_n_a6lhjy.jpg",
  "description": "Hecho con el mejor café tostado, originario de Chiapas",
-"size": "Presentación 250gr", "costo": "110"},{"id":3,"name":"Mandil corte de Lujo", 
+"size": "Presentación 250gr", "costo": "110.00"},{"id":3,"name":"Mandil corte de Lujo", 
 "img":"https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/53354671_579503035870606_6664139277111411912_n_begudt.jpg",
  "description": "Mandil elaborado en piel genuina de res. Cortado, ensamblado y cosido totalmente a mano.",
  "size": "Talla: S, M, L", "costo": "2000.00"},{"id":4,"name":"Mandil corte de Lujo", 
@@ -19,7 +19,7 @@ let text= `[{"id":1,"name":"Café Orgánico",
  "size": "Talla: S, M, L","costo":"1450.00"},{"id":7,"name":"Mandil corte Industrial con sublimado", 
 "img":"https://res.cloudinary.com/rookiesquad/image/upload/v1636498659/mandil_tremenda_mexa_vrxkcz.png",
  "description": "En loneta sublimada con una hermosa imagen que ella eligió y fondo de mezclilla industrial color negro. Bolsas en piel de res cosidas a mano y etiqueta de cuero de res con su nombre, ambas son desmontables. ",
- "size": "Talla: S, M, L", "costo":"1350"},{"id":8,"name":"Mandil corte Industrial", 
+ "size": "Talla: S, M, L", "costo":"1350.00"},{"id":8,"name":"Mandil corte Industrial", 
 "img":"https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/71189068_673387299850155_4273578602593480175_n_iauq2i.jpg",
  "description": "En loneta obscura sublimada y tirantes textiles fijos al mandil, personalizado con logo.",
  "size": "Talla: S, M, L", "costo":"950.00"},{"id":9,"name":"Mandil corte Industrial", 
@@ -57,7 +57,7 @@ function addItem(products){
                 <center><h5 class="card-title">${item.name}</h5></center>
                 <p class="card-text">${item.size}</p>   
                 <p class="card-text">$${item.costo} MXN</p> 
-                <center><a type="button" href="./details.html?id=${item.id}" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#qwerty" style="background-color: #0E8784;">Ver mas... </a></center>
+                <center><a type="button" href="./details.html?id=${item.id}" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#qwerty" style="background-color: #0E8784;">Ver más</a></center>
               </div>
           </div><br>
         </div>
