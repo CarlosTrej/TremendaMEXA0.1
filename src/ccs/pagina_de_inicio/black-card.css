@@ -27,9 +27,10 @@ background-color: black;
 .card_2 h2{
 font-size: 50px;
     padding: 10px;
-    font-family:  cursive;
+    font-family: 'Fraunces', serif;
 }
 .card_2 h5{
+    font-family: 'Fraunces', serif;
 text-align: center;
     font-size: 15px;
 padding: 5px;
