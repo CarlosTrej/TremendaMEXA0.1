@@ -44,6 +44,7 @@ form.addEventListener("submit",function(e){
 
                     }else{
                         let item ={
+                            
                             name: nombre.value,
                             img: imagen.value,
                             description: describcion.value,

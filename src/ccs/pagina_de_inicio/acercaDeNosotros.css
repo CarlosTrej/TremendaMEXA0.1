@@ -1,11 +1,12 @@
 .team-boxed {
-    color: #313437;
+    color: #83888F;
   }
   .team-boxed p {
     color:black;
     font-weight: bold;
   }
   .team-boxed .intro .text-center h2 {
+    font-family: 'Fraunces', serif;
     font-weight: bold;
     padding: 60px;
     color: inherit;
@@ -19,6 +20,7 @@
     margin: 0 auto;
   }
   .team-boxed .intro h1 {
+    font-family: 'Fraunces', serif;
     margin-bottom: 25px;
       padding-top: 25px;
       text-align: left;
@@ -40,8 +42,9 @@
   .team-boxed .item .box {
     text-align: center;
     padding: 30px;
-    background-color:#fff;
+    background-color:#FEFCF7;
     margin-bottom: 30px;
+    
   }
   #object-position-1 {
     object-position:center;
@@ -56,7 +59,7 @@
   .team-boxed .item .title {
     text-transform: uppercase;
     font-weight: bold;
-    color:#4b565c;
+    color:#83888F;
     letter-spacing: 2px;
     font-size: 12px;
   }
@@ -65,21 +68,24 @@
     margin-top: 15px;
     margin-bottom: 20px;
     font-weight: bolder;
+    
   }
   
   .team-boxed .item img {
-    width: 80%;
+    width: 70%;
     display: block;
     margin-left: auto;
     margin-right: auto;
   
   }
   .team-boxed .container .row .description {
-    text-align:start;
+    text-align: center;
+    padding-top: 15px;
   }
+ 
   .team-boxed .social {
     font-size: 33px;
-    color:#fff;
+    color:#FEFCF7;
   }
   
   .team-boxed .social a {
