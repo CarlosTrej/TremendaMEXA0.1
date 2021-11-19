@@ -10,6 +10,10 @@
 @import url('products.css');
 
 /* cards de los productos */
+
+body{
+    font-family: 'Barlow', sans-serif;
+}
 .container{
 display:  flex;
 justify-content: center;
@@ -17,7 +21,7 @@ flex-wrap: wrap;
 
 }
 .card{
-background:white ;
+background:#FEFCF7 ;
 width: 250px;
 height: 550px;
  margin: 18px;
@@ -26,7 +30,7 @@ height: 550px;
  }
  
 .card-image{
-background-color: aqua;
+background-color: #FEFCF7;
 height: 350px;
 margin-bottom: 15px;
 background-size: cover;
@@ -64,6 +68,7 @@ background-image: url(/src/images/images_index/CortedeLujo_p.png);
 .card h2{
     padding: 20px;
     text-align: center;
+    font-family: 'Fraunces', serif;
     
 }
 
@@ -76,7 +81,7 @@ background-image: url(/src/images/images_index/CortedeLujo_p.png);
 
     border-radius: 20px;
     background-color: black;
-    color: white;
+    color:#FEFCF7;
     padding: 15px 20px;
     display: block;
     text-align: center;
@@ -86,7 +91,7 @@ background-image: url(/src/images/images_index/CortedeLujo_p.png);
 
 .card:hover{
 background-color: rgb(62, 62, 62);
-color: #1B9682;
+color: #0E8784;
 cursor: pointer;
 transform: scale(1.03);
 transition: all 0.1s ease;

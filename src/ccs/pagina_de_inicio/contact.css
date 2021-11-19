@@ -13,7 +13,7 @@
   max-width: 480px;
   width: 90%;
   margin: 0 auto;
-  background-color: #1B9682;
+  background-color: #0E8784;
   padding: 40px;
   border-radius: 10px;
   color: black;
@@ -28,6 +28,7 @@
 }
 
 .contact-clean h2 {
+  font-family: 'Fraunces', serif;
   margin-top: 5px;
   font-weight: bold;
   font-size: 28px;
@@ -36,7 +37,7 @@
 }
 
 .contact-clean form .form-control {
-  background: #fff;
+  background: #FEFCF7;
   border-radius: 2px;
   box-shadow: 1px 1px 1px rgba(0,0,0,0.05);
   outline: none;
@@ -46,7 +47,7 @@
 }
 
 .contact-clean form .form-control:focus {
-  border: 1px solid #b2b2b2;
+  border: 1px solid #83888F;
 }
 
 .contact-clean form textarea.form-control {

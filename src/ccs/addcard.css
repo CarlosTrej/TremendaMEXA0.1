@@ -2,7 +2,7 @@
     max-width: 480px;
     width: 100%;
     margin: 0 auto;
-    background-color: #1B9682;
+    background-color: #0E8784;
     padding: 40px;
     border-radius: 10px;
     box-shadow: black;
@@ -16,7 +16,7 @@
   }
 
 #añadir{
-    color:white/* #E9C9B2 */;
+    color:#FEFCF7/* #E9C9B2 */;
     font-weight:bold;
     background-color: black;
 }
