@@ -15,7 +15,8 @@ footer{
     width: 100%;
     padding: 0px 0px;
     background-size: cover;
-    background:#333D4B ;
+    background:black
+;
     display:flex ;
     justify-content: space-around;
    
