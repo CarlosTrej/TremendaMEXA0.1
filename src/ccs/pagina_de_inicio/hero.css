@@ -22,12 +22,12 @@ box-sizing: border-box;
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   color: white;
+   color:#FEFCF7;
  }
 .hero-text h1{
  line-height: 1.5;
  font-size: 5em;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-family: 'Fraunces', serif;
 }
  .hero-text p{
 
