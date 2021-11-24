@@ -10,6 +10,7 @@
 @import url('products.css');
 @import url("./../registro.css");
 @import url("./../addcard.css");
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
 
 
 /* cards de los productos */
@@ -23,6 +24,14 @@ justify-content: center;
 flex-wrap: wrap;
 
 }
+h2,h3,h4,h5,h1{
+    font-family: 'PT Sans', sans-serif; 
+}
+p{
+    font-family: 'Nunito', sans-serif;
+    
+}
+
 .card{
 background:#FEFCF7 ;
 width: 250px;
@@ -71,7 +80,7 @@ background-image: url(/src/images/images_index/CortedeLujo_p.png);
 .card h2{
     padding: 20px;
     text-align: center;
-    font-family: 'Fraunces', serif;
+   
     
 }
 
@@ -100,3 +109,38 @@ transform: scale(1.03);
 transition: all 0.1s ease;
 
 }
+#form {
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+  }
+  
+  #form p {
+    text-align: center;
+  }
+  
+  #form label {
+    font-size: 20px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  label {
+    color: grey;
+  }
+  
+  .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+  
+  label:hover,
+  label:hover ~ label {
+    color: orange;
+  }
+  
+  input[type="radio"]:checked ~ label {
+    color: orange;
+  }

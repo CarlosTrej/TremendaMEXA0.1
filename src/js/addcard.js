@@ -7,6 +7,7 @@ form.addEventListener("submit",function(e){
     e.preventDefault();
     
     let addLocalStorage =[];
+    addLocalStorage.length
     let nombre = document.getElementById("name");
     let imagen = document.getElementById("image");
     let describcion = document.getElementById("description");
@@ -43,18 +44,45 @@ form.addEventListener("submit",function(e){
                         alertModal("Verifíca el precio del producto");
 
                     }else{
-                        let item ={
+
+                        if(localStorage.getItem("producto") == null){
+
+                            let item ={
+                                id:0,
+                                name: nombre.value,
+                                img: imagen.value,
+                                description: describcion.value,
+                                size: tamano.value,
+                                costo:precio.value
+                            }/* Object item */
                             
-                            name: nombre.value,
-                            img: imagen.value,
-                            description: describcion.value,
-                            size: tamano.value,
-                            costo:precio.value
-                        }/* Object item */
-                        addLocalStorage.push(item);
-                        window.localStorage.setItem("producto", JSON.stringify(addLocalStorage));
-                        validTrue();
-                        clear(nombre, imagen, describcion, tamano, precio);
+                            addLocalStorage.push(item);
+                            window.localStorage.setItem("producto", JSON.stringify(addLocalStorage));
+                            validTrue();
+                            clear(nombre, imagen, describcion, tamano, precio);
+
+                        }else{
+
+                             
+                            let newProducts = JSON.parse(localStorage.getItem("producto"))
+                            let x = parseInt(newProducts.length,10)
+
+                            let item ={
+                                id: x,
+                                name: nombre.value,
+                                img: imagen.value,
+                                description: describcion.value,
+                                size: tamano.value,
+                                costo:precio.value
+                            }/* Object item */ 
+                            
+                            newProducts.push(item)
+                            localStorage.setItem("producto", JSON.stringify(newProducts));
+                            validTrue();
+                            clear(nombre, imagen, describcion, tamano, precio);
+
+                        }
+                        
                     }
 
                 }
