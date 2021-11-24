@@ -19,6 +19,7 @@ footer{
 ;
     display:flex ;
     justify-content: space-around;
+    
    
 }
 .container_footer{
@@ -32,7 +33,7 @@ footer{
 .box__footer{
     display: flex;
     flex-direction: column;
-    padding: 22px
+    padding: 22px;
 }
 
 .box__footer .logo img{
@@ -44,6 +45,7 @@ footer{
     font-weight: 500;
     color:#0E8784;
     font-size: 18px;
+    
 }
 
 .box__footer  h2{
