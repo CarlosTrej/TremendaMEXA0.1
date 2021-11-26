@@ -34,7 +34,6 @@ function calculaTodoTotal(){
 
 btnCalc.addEventListener("click", function(e){
 
-    console.log("Me pucheaste bien fuerte!");
      calculaTodoTotal();
 
 }); /* btnCalc Action */
