@@ -4,13 +4,13 @@
   -webkit-background-clip: text;  
   -webkit-text-fill-color: solid;
            right: 650;
-            font-size: 600%;
-            font-weight: 900;
+            font-size: 400%;
+            font-weight: 700;
            text-align: center;
            display: flex;
            align-items: center;
            justify-content: center;
-           font-family: 'Roboto', sans-serif;  
+           font-family: 'Outfit', sans-serif; 
 }
 
 @media screen and (max-width: 550px) {
