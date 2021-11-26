@@ -2,6 +2,7 @@
     padding-left: 25px;
     padding-right: 25px;
     font-weight: bold;
+    
 }
 
 .navbar .navbar-brand{
@@ -17,5 +18,6 @@ ul{
 }
 #icono{
     color: black;
+    padding-bottom: 0%;
 }
    

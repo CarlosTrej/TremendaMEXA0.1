@@ -12,6 +12,8 @@
 @import url("./../addcard.css");
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
 @import url("./detail.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&family=Nunito:ital,wght@0,200;1,200&family=Roboto+Slab:wght@300&display=swap');
+
 
 /* cards de los productos */
 
@@ -103,8 +105,9 @@ background-image: url(/src/images/images_index/CortedeLujo_p.png);
 }
 
 .card:hover{
-background-color: rgb(62, 62, 62);
-color: #0E8784;
+background-color: rgb(161, 156, 156);
+
+color: whitesmoke;
 cursor: pointer;
 transform: scale(1.03);
 transition: all 0.1s ease;
