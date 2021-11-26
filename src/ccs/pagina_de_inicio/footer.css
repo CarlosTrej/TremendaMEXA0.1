@@ -20,6 +20,7 @@ footer{
     display:flex ;
     justify-content: space-around;
     
+    
    
 }
 .container_footer{
@@ -28,12 +29,13 @@ footer{
     justify-content: space-between;
     max-width: 1200px;
     margin: auto;
-    margin-top: 800px;
+    margin-top: 100px;
 }
 .box__footer{
     display: flex;
     flex-direction: column;
     padding: 22px;
+    
 }
 
 .box__footer .logo img{
@@ -53,12 +55,14 @@ footer{
     margin-bottom: 30px;
     color:#0E8784;
     font-weight: 700;
+    
 }
 
 .box__footer a{
     margin-top: 8px;
     color:#0E8784;
     font-weight: 600;
+    
 }
 
 .box__footer a:hover{
@@ -66,6 +70,7 @@ footer{
 }
 .box__footer a .fab{
     font-size: 20px;
+    
 }
 
 .box__copyright{
@@ -85,4 +90,7 @@ footer{
  .box__footer{
      font-size: 30px;
 
+ }
+ .box__footer .bi{
+    color: #0E8784;
  }
