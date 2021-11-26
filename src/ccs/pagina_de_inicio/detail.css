@@ -1,0 +1,15 @@
+#img-detail{
+    border-radius: 8%;
+    align-content: center; 
+    
+    
+}
+
+#content-detail{
+    border: 4px outset; 
+}
+
+#list-products-details{
+    border:5px double #0E8784 ;
+    align-content: center; 
+}
