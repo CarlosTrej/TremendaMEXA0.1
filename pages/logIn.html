@@ -12,47 +12,69 @@
 </head>
 
 <body id="fondo">
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(0, 0,0, 0)">
-    <a class="navbar-brand" href="./../index.html">
-        <img src="./../src/images/logoTremenda.png" width="60" height="60" alt="">
-      </a>
-    <a class="navbar-brand" style="margin-right: 1cm;" href="./../index.html">TremendaMexa</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+      <a class="navbar-brand" href="./../index.html" >
+        <span> <img
+          src="../src/images/logoTremenda.png"
+          width="60"
+          height="60"
+          alt=""
+        /></span>
+        <span></span>
+        TremendaMexa</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+   
+    <div class="mx-auto order-0 ">
+      <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll justify" style="max-height: 100px;">
         <li class="nav-item active">
-          <a class="nav-link"style="margin: right 1cm;" href="./../index.html">Inicio <span class="sr-only">(current)</span></a>
+          <a class="nav-link"href="./../index.html"  >Inicio <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item"><a class="nav-link" href="./contacto_form.html">Contacto</a></li>
+        <li class="nav-item">
+          <a class="nav-link" href="./contacto_form.html"  >Contacto</a>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
             Productos
           </a>
-           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="./products.html">Bolsas y Mandiles</a>
-            <a class="dropdown-item" href="./products.html">Café</a>        
-           </div>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item"href="./products.html" >Bolsas</a></li>
+            <li><a class="dropdown-item" href="./products.html">Mandiles</a></li>
+            <li><a class="dropdown-item" href="./products.html">Café</a></li>
+          </ul>
         </li>
-        <li class="nav-item"><a class="nav-link" style="margin-right: 1cm;" href="./acercaDeNosotros.html">Nosotros</a></li>
-        <li class="nav-item dropdown" style="margin-right: 7cm;" style="list-style: none;">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-            <i class="bi bi-person-fill" style ="width: 150%; height:150%;" id="carrito"></i>
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="./logIn.html">Iniciar sesión </a>
-            <a class="dropdown-item" href="./registro.html">Registrar</a>
-            <li  class="nav-item active" >
-              <a  class="nav-link" href="./carritoCompras.html"><i  style="margin-right: 1cm;"class="bi bi-cart4" id="carrito"> 
-              </i>
-              </a>
-              </li>
-          </div>
+        <li class="nav-item">
+          <a class="nav-link" href="./acercaDeNosotros.html" >Nosotros</a>
         </li>
       </ul>
+       
     </div>
-  </nav> <!-- nav -->
+  
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            <i   id ="icono" class="bi bi-person-circle"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="./logIn.html" >Inicia sesion</a></li>
+            <li><a class="dropdown-item" href="./registro.html">Registro</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"href="./carritoCompras.html" ><i class="bi bi-cart4"></i></a>
+      </li>
+      
+    </ul>
+</div>
+  
+  
+  </nav>
     <section class="contact-clean">
         <form method="post" id="formLogin">
             <center><h2 class="visually-hidden">Inicio de Sesión</h2></center>
