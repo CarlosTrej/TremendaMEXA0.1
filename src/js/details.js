@@ -20,6 +20,8 @@ window.onload = function(){
 
 }/* window.onload */
 
+
+
 function addItem(iD){
   
   
@@ -44,7 +46,7 @@ function addItem(iD){
               <input id="radio5" type="radio" name="estrellas" value="1"><label for="radio5">★</label>
             </p>
           </form>
-              <a type="submit" href="./carritoCompras.html" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#qwerty" style="background-color: #0E8784; ">
+              <a type="submit" href="./carritoCompras.html?id=${iD.id}"  class="btn btn-success" data-bs-toggle="modal" data-bs-target="#qwerty" style="background-color: #0E8784; ">
                   <b>Agregar al carrito</b>
               </a>   
       </div>
@@ -56,45 +58,8 @@ function addItem(iD){
             <div class="col"><br></div>
           </div>           
       `
+
       
   }//function
 
-buttonCar.addEventListener("submit",function(e){
-  let addLocalStorage =[];
-  if(localStorage.getItem("Carrito") == null){
 
-    let item ={
-        id:0,
-        name: iD.name,
-        img: iD.img,
-        description: iD.description,
-        size: iD.size,
-        costo:iD.costo
-    }/* Object item */
-    
-    addLocalStorage.push(item);
-    window.localStorage.setItem("Carrito", JSON.stringify(addLocalStorage));
-    
-
-}else{
-
-    
-    let newProducts = JSON.parse(localStorage.getItem("Carrito"))
-    let x = parseInt(newProducts.length,10)
-
-    let item ={
-      id:x,
-      name: iD.name,
-      img: iD.img,
-      description: iD.description,
-      size: iD.size,
-      costo:iD.costo
-    }/* Object item */ 
-    
-    newProducts.push(item)
-    localStorage.setItem("Carrito", JSON.stringify(newProducts));
-
-}
-
-
-});
