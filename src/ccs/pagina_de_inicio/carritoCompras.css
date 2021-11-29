@@ -52,4 +52,15 @@ table#cart {
     font-family: 'Fraunces', serif;
     text-align: center;
   }
+
+  #text-title{
+    border: 1px inset #e1e0e0;
+    border-radius: 6%;
+    background-color: #0E8783;
+    color: white;
+    
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+  
   

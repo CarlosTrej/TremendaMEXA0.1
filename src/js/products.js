@@ -72,7 +72,7 @@ function addItem(products){
       name:item.name,
       img: item.img,
       size: item.size,
-      costo: other,
+      costo: item.costo,
       description: item.description
     }
     localStorage.setItem(id, JSON.stringify(element));
@@ -93,38 +93,44 @@ function addItem(products){
 
 function executeJSON(){
 
-  
+  let x = (products.length)+1
   
   let valueInLocalStorage = localStorage.getItem("producto");
+  
   let addLocalStorage =[];
+
   addLocalStorage = JSON.parse(valueInLocalStorage);
-  let elementsProducts= document.getElementById("list-products2");
+
+  let elementsProducts2= document.getElementById("list-products");
   
     addLocalStorage.forEach(element => {
-      elementsProducts.innerHTML += `
+      elementsProducts2.innerHTML += `
       <br><div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4" >
-      <div class="card " style="height: 650px;">
+      <div class="card" style="height: 650px;">
             <img src="${element.img}" class="card-img-top" height= "50%" alt="...">
              <div class="card-body" margin-bottom= "15px">
                 <center><h5 class="card-title">${element.name}</h5></center>
                 <p class="card-text">Presentación</p>
                 <p class="card-text">${element.size}</p>   
                 <p class="card-text">$${format(element.costo)} MXN</p> 
-                <center><a type="button" href="#" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#qwerty" style="background-color: #0E8784;">Ver mas... </a></center>
+                <center><a type="button" href="./details.html?id=${x}" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#qwerty" style="background-color: #0E8784;">Ver mas </a></center>
               </div>
           </div><br>
-        </div>
-    <br> `
-    });
+        </div><br>
+     `
+    
     let elemento = {
-      
+      id:x,
       name:element.name,
       img: element.img,
       size: element.size,
       costo: format(element.costo),
       description: element.description
     }
-    localStorage.setItem("producto", JSON.stringify(element0));
+    localStorage.setItem(x, JSON.stringify(elemento));
+    x++
+
+  });
     
 
 
