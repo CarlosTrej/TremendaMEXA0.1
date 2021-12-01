@@ -1,8 +1,10 @@
--- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+CREATE DATABASE  IF NOT EXISTS `tremendamx` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `tremendamx`;
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: tremendamx
 -- ------------------------------------------------------
--- Server version	8.0.27
+-- Server version	5.6.45-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,24 +25,26 @@ DROP TABLE IF EXISTS `pedidos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pedidos` (
-  `idPedidos` int NOT NULL AUTO_INCREMENT,
-  `Nombre de usuario` varchar(45) DEFAULT NULL,
-  `Producto` varchar(45) DEFAULT NULL,
-  `Precio` decimal(10,0) NOT NULL DEFAULT '0',
-  `Total` decimal(10,0) NOT NULL DEFAULT '0',
-  `Usuarios_idUsuarios` int NOT NULL,
-  `Usuarios_Incio de Sesión_idIncio de Sesión` int NOT NULL,
-  PRIMARY KEY (`idPedidos`,`Usuarios_idUsuarios`,`Usuarios_Incio de Sesión_idIncio de Sesión`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+  `idpedidos` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_usuario` varchar(45) DEFAULT NULL,
+  `producto` varchar(45) DEFAULT NULL,
+  `precio` decimal(10,0) NOT NULL DEFAULT '0',
+  `total` decimal(10,0) NOT NULL DEFAULT '0',
+  `usuarios_idusuarios` int(11) NOT NULL,
+  PRIMARY KEY (`idpedidos`,`usuarios_idusuarios`),
+  KEY `fk_pedidos_usuario1_idx` (`usuarios_idusuarios`),
+  CONSTRAINT `fk_pedidos_usuario1` FOREIGN KEY (`usuarios_idusuarios`) REFERENCES `usuarios` (`idusuarios`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `pedidos`
 --
+-- ORDER BY:  `idpedidos`,`usuarios_idusuarios`
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'Diego Amador ','CORTE BÁSICO',550,550,1,1);
+INSERT INTO `pedidos` VALUES (1,'Diego Amador ','CORTE BÁSICO',550,550,1);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-30 20:59:33
+-- Dump completed on 2021-11-30 23:46:53
