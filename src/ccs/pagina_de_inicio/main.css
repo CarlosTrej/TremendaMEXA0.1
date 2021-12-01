@@ -31,7 +31,7 @@ h2,h3,h4,h5,h1{
 }
 p{
     font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
+    font-size: 15px;
     
 }
 
@@ -46,8 +46,8 @@ height: 550px;
  
 .card-image{
 background-color: #FEFCF7;
-height: 350px;
-margin-bottom: 15px;
+height: 300px;
+margin-bottom: 18px;
 background-size: cover;
 border-radius: 15px 15px 0 0 ;
 
@@ -81,7 +81,7 @@ background-image: url(/src/images/images_index/CortedeLujo_p.png);
 
 }
 .card h2{
-    padding: 20px;
+    padding: 18px;
     text-align: center;
    
     
