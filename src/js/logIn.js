@@ -32,7 +32,7 @@ form.addEventListener("submit", function(e){
         if(password.value.length <8){
 
             password.classList.add("is-invalid");
-            alertModal("La contraseña debe contener al menos 8 caractére. ")
+            alertModal("Necesitas al menos 8 caractéres en tu contraseña. ")
             password.value = "";
 
         }else{
@@ -74,8 +74,8 @@ form.addEventListener("submit", function(e){
                 if(flag){
                     
                     alertModal("Inicio de sesión válido.")
+                    location.href = `./../index.html?id=${email.value}`;
                     clearInputs(email,password)
-                    location.href = "./../index.html";
 
                 }else{
                     
