@@ -1,10 +1,10 @@
-CREATE DATABASE  IF NOT EXISTS `tremendamx` /*!40100 DEFAULT CHARACTER SET utf8 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `tremendamx` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `tremendamx`;
--- MySQL dump 10.13  Distrib 8.0.26, for Win64 (x86_64)
+-- MySQL dump 10.13  Distrib 8.0.17, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: tremendamx
 -- ------------------------------------------------------
--- Server version	8.0.27
+-- Server version	5.6.45-log
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -25,25 +25,26 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `productos` (
-  `idProductos` int NOT NULL AUTO_INCREMENT,
-  `Nombre` varchar(45) NOT NULL,
-  `Precio` decimal(10,0) NOT NULL DEFAULT '0',
-  `Descripcion` varchar(500) DEFAULT NULL,
-  `Tamaño` varchar(45) NOT NULL,
+  `idProductos` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `precio` decimal(10,0) NOT NULL DEFAULT '0',
+  `descripcion` varchar(500) DEFAULT NULL,
+  `tamaño` varchar(45) NOT NULL,
   `img` varchar(2000) NOT NULL,
-  `Categorias_idCategorias` int NOT NULL,
-  `Marca_idMarca` int NOT NULL,
-  PRIMARY KEY (`idProductos`,`Categorias_idCategorias`,`Marca_idMarca`),
-  KEY `fk_Productos_Categorias1_idx` (`Categorias_idCategorias`),
-  KEY `fk_Productos_Marca1_idx` (`Marca_idMarca`),
-  CONSTRAINT `fk_Productos_Categorias1` FOREIGN KEY (`Categorias_idCategorias`) REFERENCES `categorias` (`idCategorias`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_Productos_Marca1` FOREIGN KEY (`Marca_idMarca`) REFERENCES `marca` (`idMarca`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
+  `categorias_idcategorias` int(11) NOT NULL,
+  `marca_idmarca` int(11) NOT NULL,
+  PRIMARY KEY (`idProductos`,`categorias_idcategorias`,`marca_idmarca`),
+  KEY `fk_Productos_Categorias1_idx` (`categorias_idcategorias`),
+  KEY `fk_Productos_Marca1_idx` (`marca_idmarca`),
+  CONSTRAINT `fk_Productos_Categorias1` FOREIGN KEY (`categorias_idcategorias`) REFERENCES `categorias` (`idcategorias`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_Productos_Marca1` FOREIGN KEY (`marca_idmarca`) REFERENCES `marca` (`idMarca`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `productos`
 --
+-- ORDER BY:  `idProductos`,`categorias_idcategorias`,`marca_idmarca`
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
@@ -60,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-29 15:29:30
+-- Dump completed on 2021-11-30 23:46:52
