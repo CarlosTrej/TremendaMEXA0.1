@@ -1,23 +1,34 @@
-.navbar-collapse .navbar-nav .nav-item .nav-link{
+.bg-light{
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
     padding-left: 25px;
-    padding-right: 25px;
-    font-weight: bold;
-    
-}
+    padding-right: 25px; 
 
-.navbar .navbar-brand{
-    font-weight: bold;
 }
-
-#navbarSupportedContent{
-    padding-top: 50px;
+.bg-light .navbar-brand{
+    margin-top: 25px;
+    font-size: 25px;
 }
-ul{
-
-    font-family: 'Barlow', sans-serif;
+.bg-light .navbar-brand img{
+    width: 60px;
+    height: 60px;
+}
+.form-inline{
+    color: black;
 }
 #icono{
     color: black;
-    padding-bottom: 0%;
+    padding-bottom: 0;
+    font-size: 25px;
 }
-   
+.navbar-collapse .nav-item .nav-link .bi-cart4{
+    padding-right: 50px;
+    font-size: 25px;
+}
+.navbar-collapse .mt-lg-0 .active{
+    font-size: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-weight: bold;
+}
