@@ -6,10 +6,11 @@
 }
 
 #content-detail{
-    border: 4px outset; 
+    border: 4px outset;
+    border-radius: 5%; 
 }
 
 #list-products-details{
-    border:5px double #0E8784 ;
+    border:10px double whitesmoke ;
     align-content: center; 
 }
