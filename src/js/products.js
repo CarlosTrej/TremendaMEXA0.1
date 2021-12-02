@@ -124,7 +124,7 @@ function executeJSON(){
       name:element.name,
       img: element.img,
       size: element.size,
-      costo: format(element.costo),
+      costo: element.costo,
       description: element.description
     }
     localStorage.setItem(x, JSON.stringify(elemento));
