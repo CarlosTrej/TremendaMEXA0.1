@@ -149,17 +149,4 @@ transition: all 0.1s ease;
     color: #0E8784;
   }
 
-  .navbar-collapse .nav-item .nav-link .bi-cart4{
-    padding-right: 50px;
-    font-size: 25px;
-}
-.mx-auto .navbar-nav .nav-item .nav-link{
-    font-size: 20px;
-    padding-left: 12px;
-    padding-right: 12px;
-}
-
-#icono{
-  font-size :25px;
-}
   

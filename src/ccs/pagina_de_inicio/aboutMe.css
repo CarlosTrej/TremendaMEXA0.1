@@ -1,7 +1,7 @@
 .article {
     margin-bottom:0;
     background-color:whitesmoke;
-    border:1px solid #00754a;
+   /*  border:1px solid #00754a; */
     border-radius:25px;
     color:#fff;
     cursor:pointer;
@@ -20,7 +20,8 @@
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-    -webkit-appearance:none
+    -webkit-appearance:none;
+    font-family: 'Montserrat', sans-serif;
    }
    .wp-block-button__link:active,
    .wp-block-button__link:focus,
@@ -123,13 +124,28 @@
     /* font-size:1.4rem;
     font-weight:500; */
     -ms-flex-pack:justify;
-    justify-content:space-between;
     letter-spacing:.3em;
     margin-bottom:1rem;
     overflow:hidden;
     position:relative;
     
     /* text-transform:uppercase */
+   }
+   .container{
+    -ms-flex-align:left;
+    align-items:left;
+    color:rgba(0,0,0,.87);
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-flow:row wrap;
+    flex-flow:row wrap;
+    /* font-size:1.4rem;
+    font-weight:500; */
+    -ms-flex-pack:justify;
+    letter-spacing:.3em;
+    margin-bottom:1rem;
+    overflow:hidden;
+    position:relative;
    }
    .sb-card-grid-item__meta-cat--narrow {
     letter-spacing:.12em
@@ -151,7 +167,7 @@
     outline:2px solid #343a40
    }
    .contenedor-text {
-    color:#00754a;
+    color:black;
     display:block;
     padding:.6rem 0;
     -webkit-transition:-webkit-transform .6s cubic-bezier(.22,.89,.57,1);
@@ -163,7 +179,7 @@
 
    .contenedor-text p{
        font-size: 20px;
-       font-family: "Monserrat";
+       font-family: 'Montserrat', sans-serif;
        color: #006241;
        text-decoration: none;
    }
@@ -231,4 +247,14 @@
     .bg-light{
         font-weight: 500;
         font-size: 20px;
+    }
+    .car-10{
+        
+        background-image: url(https://res.cloudinary.com/rookiesquad/image/upload/v1636498665/bolsa_tremenda_mexa_bwcvlg.png);
+        
+        }
+    #dos{
+        display: flex;
+        margin: auto;
+        align-items: center;
     }
