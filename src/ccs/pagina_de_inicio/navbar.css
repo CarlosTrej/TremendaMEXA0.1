@@ -1,23 +1,25 @@
-.navbar-collapse .navbar-nav .nav-item .nav-link{
+
+.bg-light{
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
     padding-left: 25px;
-    padding-right: 25px;
+    padding-right: 25px; 
+
+}
+.bg-light .navbar-brand{
+    margin-top: 25px;
     font-weight: bold;
-    
+    font-size: 25px;
 }
-
-.navbar .navbar-brand{
-    font-weight: bold;
+.bg-light .navbar-brand img{
+    width: 60px;
+    height: 60px;
 }
-
-#navbarSupportedContent{
-    padding-top: 50px;
-}
-ul{
-
-    font-family: 'Barlow', sans-serif;
+.form-inline{
+    color: black;
 }
 #icono{
     color: black;
-    padding-bottom: 0%;
+    padding-bottom: 0;
 }
-   
