@@ -80,7 +80,7 @@ function alertmodal(){
       confirmButtonColor: '#0E8784',
       cancelButtonColor: 'black',
       confirmButtonText: 'Cerrar sesión',
-      cancelButtontext: 'Cancelar' 
+      cancelButtonText: 'Cancelar'  
     }).then((result) => {
       if (result.isConfirmed) {
         Swal.fire(
