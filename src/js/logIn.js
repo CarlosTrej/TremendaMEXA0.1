@@ -74,7 +74,7 @@ form.addEventListener("submit", function(e){
                 if(flag){
                     
                     alertModal("Inicio de sesión válido.")
-                    location.href = `./../index.html?id=${email.value}`;
+                    location.href = `./../index.html?usuarioactivo=${email.value}`;
                     clearInputs(email,password)
 
                 }else{
