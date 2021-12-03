@@ -2,6 +2,8 @@
 
 let form = document.getElementById("formLogin");
 
+
+
 form.addEventListener("submit", function(e){
 
     e.preventDefault();
@@ -27,23 +29,72 @@ form.addEventListener("submit", function(e){
 
     }else{
         
-        if(passwordValid(password) == false){
+        if(password.value.length <8){
 
             password.classList.add("is-invalid");
-            alertModal("La contraseña debe contener al menos 8 caractéres, con una letra mayuscula, un número y un carácter especial. ")
+            alertModal("Necesitas al menos 8 caractéres en tu contraseña. ")
             password.value = "";
 
         }else{
+            let user={
+                mail: email.value,
+                pass: password.value
+            }
 
-            validTrue();
+            let addLocalStorage =[];
+            
+            addLocalStorage.push(user);
+            
+            
+                
+            if(localStorage.getItem("usuario") == null){
+                /* validTrue(); */
+                
+                
+               window.localStorage.setItem("usuario", JSON.stringify(addLocalStorage));
+                
+            }else{
+                let flag = false
 
-        }/* end password if */
+                let newUser = []
+                newUser = JSON.parse(localStorage.getItem("usuario"))
 
-       
-    }/* end if */
+                newUser.forEach(function( element){
+                    
+                    if(email.value == element.Email && password.value == element.Password){
+                        
+                        return flag = true;
+                        
+                    }else{
+                        
+                        return flag = false;
+                    }
+                }); 
+
+                if(flag){
+                    
+                    alertModal("Inicio de sesión válido.")
+                    location.href = `./../index.html?usuarioactivo=${email.value}`;
+                    clearInputs(email,password)
+
+                }else{
+                    
+                    alertModal("Verifica el correo electrónico y/o contraseña.")
+                    email.classList.add("is-invalid");
+                    password.classList.add("is-invalid");
+
+                }
 
 
-});/*form.addEventListener  */
+            }
+
+
+        }
+
+    }/* else before valid inputs */
+        
+    });/* form addenevtlistener */
+
 
 function alertModal(text){
     Swal.fire({
@@ -55,14 +106,14 @@ function alertModal(text){
       })
 }/*  alertModal */
 
-function passwordValid(password){
+/* function passwordValid(password){
     regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if(regex.exec(password.value) == null){
         return false
     }else{
         return true;
     }
-}/* passwordValid */
+} *//* passwordValid */
 
 
 function validTrue(){

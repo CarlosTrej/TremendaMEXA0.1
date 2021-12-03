@@ -11,48 +11,61 @@
     <title>Página de Inicio</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:rgba(0, 0,0, 0)">
+    <!-- navbar responsiva -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./../index.html">
-            <img src="../src/images/logoTremenda.png" width="60" height="60" alt="">
-          </a>
-        <a class="navbar-brand" style="margin-right: 1cm;" href="./../index.html">TremendaMexa</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../src/images/logoTremenda.png" width="50" height="50" class="d-inline-block align-top" alt="">
+          TremendaMexa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+      
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-              <a class="nav-link"style="margin: right 1cm;" href="./../index.html">Inicio <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="./../index.html">Inicio <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item"><a class="nav-link" href="./contacto_form.html">Contacto</a></li>
+            <li class="nav-item active">
+              <a class="nav-link" href="./contacto_form.html">Contacto</a>
+            </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                Productos
-              </a>
-               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="./products.html">Bolsas y Mandiles</a>
-                <a class="dropdown-item" href="./products.html">Café</a>
-                
-               </div>
-            </li>
-            <li class="nav-item"><a class="nav-link" style="margin-right: 1cm;" href="./acercaDeNosotros.html">Nosotros</a></li>
-            <li class="nav-item dropdown" style="margin-right: 7cm;" style="list-style: none;">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-expanded="false">
-                <i class="bi bi-person-fill" style ="width: 150%; height:150%;" id="carrito"></i>
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="./logIn.html">Iniciar sesión </a>
-                <a class="dropdown-item" href="./registro.html">Registrar</a>
-                <li  class="nav-item active" >
-                  <a  class="nav-link" href="./carritoCompras.html"><i  style="margin-right: 1cm;"class="bi bi-cart4" id="carrito"> 
-                  </i>
-                  </a>
-                  </li>  
-              </div>
-            </li>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Productos
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="./products.html">Mandiles</a>
+                  <a class="dropdown-item" href="./products.html">Bolsas</a>
+                  <a class="dropdown-item" href="./products.html">Café</a>
+                </div>
+              </li>
+              <li class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Nosotros
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="./tremendaMexaAbout.html">TremendaMexa</a>
+                  <a class="dropdown-item" href="./acercaDeNosotros.html">Acerca de Nosotros</a>
+                </div>
+              </li>
           </ul>
+          <form class="form-inline my-2 my-lg-0">
+            
+            <ul class="nav-item active dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i   id ="icono" class="bi bi-person-circle"></i>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="./logIn.html">Inicia sesion</a>
+                  <a class="dropdown-item" href="./registro.html">Registro</a>
+                </div>
+            </ul>
+              <ul class="nav-item active">
+                <a class="nav-link"href="./carritoCompras.html" ><i id="icono" class="bi bi-cart4"></i></a>
+              </ul>
+          </form>
         </div>
-      </nav> <!--Navbar-->
+      </nav><!-- navbar responsiva -->
+  
       <section class="team-boxed">
         <div class="container">
             <div class="intro" id="intro_mex">
@@ -61,73 +74,69 @@
                     </p>
             </div>
             <div class="row people">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="./../src/images/photos/Anali_1.jpeg">
+                <div class="col-md-6 col-lg-4 item ">
+                    <div class="box"><img class="rounded" src="../src/images/perf/Ana.jpg">
                         <h3 class="name">Anali Solis</h3>
                         <p class="title">Desarrollador Java Full-Stack</p>
-                        <p class="description">Soy una apasionada del desarrollo web y la tecnología,  me gustan los retos y superarme constantemente como persona y profesionista               <br><br><br></p>
-                        <div class="social"><a href="mailto:analiceleste@gmail.com"><i class="bi bi-google"></i></i></a><a href="https://www.linkedin.com/in/anali-solis-hernandez-8ba721221/"><i class="bi bi-linkedin"></i></a><a href="https://github.com/A-SoHdz"><i class="bi bi-github"></i></a></div>
+                        <p class="description" id="txt-a">"El éxito se construye con disciplina y constancia." </p>
+                        <div class="social"><a href="mailto:analiceleste@gmail.com"><i id="go" class="bi bi-google"></i></i></a><a href="https://www.linkedin.com/in/anali-solis-hernandez-8ba721221/"><i id="go" class="bi bi-linkedin"></i></a><a href="https://github.com/A-SoHdz"><i id="go"class="bi bi-github"></i></a></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="../src/images/perfiles/TaniaIMG.jpg">
+                <div class="col-md-6 col-lg-4 item ">
+                    <div class="box"><img class="rounded" src="../src/images/perf/Tania.jpg">
                         <h3 class="name">Tania Serrano</h3>
                         <p class="title">Desarrollador Java Full-Stack</p>
-                        <p class="description">Soy una apasionada desarrolladora full stack en recién crecimiento ,con muchas ganas de compartir mis habilidades y de seguir aprendiendo.      <br> <br></p>
-                        <div class="social"><a href="mailto:taniseca08@gmail.com"><i class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/tania-serrano-6069a5201"><i class="bi bi-linkedin"></i></a><a href="https://github.com/TANIA990"><i class="bi bi-github"></i></a></div>
+                        <p class="description">"Si se puede imaginar se puede programar."</p>
+                        <div class="social"><a href="mailto:taniseca08@gmail.com"><i id="go" class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/tania-serrano-6069a5201"><i id="go"class="bi bi-linkedin"></i></a><a href="https://github.com/TANIA990"><i id="go" class="bi bi-github"></i></a></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="../src/images/perfiles/Trejo.png">
+                <div class="col-md-6 col-lg-4 item ">
+                    <div class="box"><img class="rounded" src="../src/images/perf/Carlos.jpg">
                         <h3 class="name">Carlos Trejo</h3>
                         <p class="title">Desarrollador Java Full-Stack</p>
-                        <p class="description">Soy  un melómano y cafeinómano que le gusta su carrera universitaria en la que se desenvuelve, el diseño web y el manejo de base de datos, busco ampliar mi experiencia como desarrollador.</p>
-                        <div class="social"><a href="mailto:carlostrejo182@gmail.com"><i class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/carlostrejo182/"><i class="bi bi-linkedin"></i></a><a href="https://github.com/CarlosTrej"><i class="bi bi-github"></i></a></div>
+                        <p class="description">"Controlar la complejidad es la esencia de la programación."</p>
+                        <div class="social"><a href="mailto:carlostrejo182@gmail.com"><i id="go" class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/carlostrejo182/"><i id="go" class="bi bi-linkedin"></i></a><a href="https://github.com/CarlosTrej"><i id="go"class="bi bi-github"></i></a></div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="./../src/images/photos/Robert_1.jpg">
+                    <div class="box"><img class="rounded" src="../src/images/perf/Roberto.jpg">
                         <h3 class="name">Roberto Flores</h3>
                         <p class="title">Desarrollador Java Full-Stack</p>
-                        <p class="description">Desarrolador web apasionado por aprender y dar solucion a cualquier problema. <br><br><br><br></p>
-                        <div class="social"><a href="mailto:robertofloresserrano7@gmail.com"><i class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/roberto-fs/"><i class="bi bi-linkedin"></i></a><a href="https://github.com/Rober-f"><i class="bi bi-github"></i></a></div>
+                        <p class="description">"Si te caes siete veces, levántate ocho."</p>
+                        <div class="social"><a href="mailto:robertofloresserrano7@gmail.com"><i id="go" class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/roberto-fs/"><i id="go" class="bi bi-linkedin"></i></a><a href="https://github.com/Rober-f"><i id="go" class="bi bi-github"></i></a></div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="../src/images/perfiles/Gustavo.PNG">
-                        <h3 class="name">Gustavo Calderon</h3>
-                        <p class="title">Desarrollador Java Full-Stack</p>
-                        <p class="description">Desarrolador web, interesado en el Backend y matemático como formación. <br><br><br><br></p>
-                        <div class="social"><a href="mailto:f.gustav.c@gmail.com"><i class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/gustavocalder%C3%B3ng/"><i class="bi bi-linkedin"></i></a><a href="https://github.com/GUSSTAVUS"><i class="bi bi-github"></i></a></div>
+                <div class="col-md-6 col-lg-4 item ">
+                    <div class="box"><img class="rounded" id="gus" src="../src/images/perf/Gustavo.jpg">
+                        <br><h3 class="name">Gustavo Calderon</h3>
+                        <p class="title">Desarrollador Java Full-Stack</p>  
+                        <p class="description">"Interesado en el Backend y matemático como formación." </p>
+                        <div class="social"><a href="mailto:f.gustav.c@gmail.com"><i id="go" class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/gustavocalder%C3%B3ng/"><i id="go" class="bi bi-linkedin"></i></a><a href="https://github.com/GUSSTAVUS"><i id="go" class="bi bi-github"></i></a></div>
                     </div>
                 </div>
                 
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="./../src/images/photos/Ricardo_1.jpg">
+                <div class="col-md-6 col-lg-4 item ">
+                    <div class="box"><img class="rounded" src="../src/images/perf/Richi.jpg">
                         <h3 class="name">Ricardo Archundia</h3>
                         <p class="title">Desarrollador Java Full-Stack</p>
-                        <p class="description">Apasionado por el desarrollo web y tecnologías emergentes, aprendiendo nuevas habilidades para ser más competitivo y crecer profesionalmente.</p>
-                        <div class="social"><a href="mailto:ricardomarchundia@gmail.com"><i class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/ricardo-morales-archundia-4a4b01221/"><i class="bi bi-linkedin"></i></a><a href="https://github.com/rmarchundia"><i class="bi bi-github"></i></a></div>
+                        <p class="description">"Apasionado por el desarrollo web y tecnologías emergentes."</p>
+                        <div class="social"><a href="mailto:ricardomarchundia@gmail.com"><i id="go" class="bi bi-google"></i></a><a href="https://www.linkedin.com/in/ricardo-morales-archundia-4a4b01221/"><i id="go"class="bi bi-linkedin"></i></a><a href="https://github.com/rmarchundia"><i id="go" class="bi bi-github"></i></a></div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded" src="../src/images/perfiles/diego png.png">
+                    <div class="box"><img class="rounded" id="die"src="../src/images/perf/Diego.jpeg">
                         <h3 class="name">Diego Amador</h3>
                         <p class="title">Desarrollador Java Full-Stack</p>
                         <p class="description">"Apasionado por el desarrollo de web y marketing digital. Con experiencia en diferentes
-                            áreas del la comunicación. Soy apasionado por mi trabajo, siempre en busca de crecer tanto en
-                            lo profesional y lo personal."</p>
-                        <div class="social"><a href="mailto:ivanantonioivanamador12@gmail.com"><i class="bi bi-google"></i></a><a href="https://linkedin.com/in/diego-antonio-ivan-amador-gonzález-b76550222"><i class="bi bi-linkedin"></i></a><a href="https://github.com/DiegoAmadorG"><i class="bi bi-github"></i></a></div>
+                            áreas de la comunicación."</p> 
+                            <!-- Soy apasionado por mi trabajo, siempre en busca de crecer tanto en
+                            lo profesional y lo personal." -->
+                        <div class="social"><a href="mailto:ivanantonioivanamador12@gmail.com"><i id="go" class="bi bi-google"></i></a><a href="https://linkedin.com/in/diego-antonio-ivan-amador-gonzález-b76550222"><i id="go"class="bi bi-linkedin"></i></a><a href="https://github.com/DiegoAmadorG"><i id="go"class="bi bi-github"></i></a></div>
                     </div>
                 </div>
-               
             </div>
         </div>
     </section>
-     
-     
-     
-     
      
      
      
