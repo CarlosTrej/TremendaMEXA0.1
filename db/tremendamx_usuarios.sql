@@ -29,24 +29,20 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
   `correo` varchar(45) NOT NULL,
-  `contraseña` varchar(45) NOT NULL,
-  `mensaje` varchar(45) DEFAULT NULL,
+  `password` varchar(45) NOT NULL,
   `telefono` varchar(45) DEFAULT NULL,
-  `usuarioscol` varchar(45) DEFAULT NULL,
-  `pedido_idpedido` int(11) NOT NULL,
-  PRIMARY KEY (`idusuarios`,`pedido_idpedido`),
-  KEY `fk_usuarios_pedidos1_idx` (`pedido_idpedido`)
+  PRIMARY KEY (`idusuarios`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `usuarios`
 --
--- ORDER BY:  `idusuarios`,`pedido_idpedido`
+-- ORDER BY:  `idusuarios`
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'Diego','Amador','ivanantonioamador12@gmail.com','TremendaMX1',NULL,'5516348',NULL,0),(2,'Anali','Solis','anasolis.908@gmail.com','24682468',NULL,'65877792',NULL,0),(3,'Ricardo','Archundia','ricardomarchundia@gmail.com','14268',NULL,'4873566',NULL,0),(4,'Gustavo',' Calderon ','f.gustav.c@gmail.com ','5548728',NULL,'112470',NULL,0),(5,'Tania',' Serrano','taniseca08@gmail.com 5615569744','784365',NULL,'425440697',NULL,0),(6,'Carlos','Trejo','carlostrejo182@gmail.com','2718281828',NULL,'4630477',NULL,0),(7,'roberto','flores','robertofloresserrano7@gmail.com','123456',NULL,'5539745',NULL,0);
+INSERT INTO `usuarios` VALUES (1,'Diego','Amador','ivanantonioamador12@gmail.com','TremendaMX1','5516348'),(2,'Anali','Solis','anasolis.908@gmail.com','24682468','65877792'),(3,'Ricardo','Archundia','ricardomarchundia@gmail.com','14268','4873566'),(4,'Gustavo',' Calderon ','f.gustav.c@gmail.com ','5548728','112470'),(5,'Tania',' Serrano','taniseca08@gmail.com 5615569744','784365','425440697'),(6,'Carlos','Trejo','carlostrejo182@gmail.com','2718281828','4630477'),(7,'roberto','flores','robertofloresserrano7@gmail.com','123456','5539745');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -59,4 +55,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-30 23:46:52
+-- Dump completed on 2021-12-04 20:44:10

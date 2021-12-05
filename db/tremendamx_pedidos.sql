@@ -26,15 +26,15 @@ DROP TABLE IF EXISTS `pedidos`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `pedidos` (
   `idpedidos` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre_usuario` varchar(45) DEFAULT NULL,
-  `producto` varchar(45) DEFAULT NULL,
-  `precio` decimal(10,0) NOT NULL DEFAULT '0',
-  `total` decimal(10,0) NOT NULL DEFAULT '0',
+  `nombre_usuario` varchar(45) DEFAULT 'Client',
+  `producto` varchar(45) DEFAULT 'Product',
+  `precio` decimal(10,0) NOT NULL DEFAULT '10',
+  `total` decimal(10,0) NOT NULL DEFAULT '10',
   `usuarios_idusuarios` int(11) NOT NULL,
   PRIMARY KEY (`idpedidos`,`usuarios_idusuarios`),
   KEY `fk_pedidos_usuario1_idx` (`usuarios_idusuarios`),
   CONSTRAINT `fk_pedidos_usuario1` FOREIGN KEY (`usuarios_idusuarios`) REFERENCES `usuarios` (`idusuarios`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -44,7 +44,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'Diego Amador ','CORTE BÁSICO',550,550,1);
+INSERT INTO `pedidos` VALUES (1,'Diego Amador ','CORTE BÁSICO',550,550,1),(2,'Gustavo Calderón ','SUBLIMADO',550,550,4);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -57,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-30 23:46:53
+-- Dump completed on 2021-12-04 20:44:10

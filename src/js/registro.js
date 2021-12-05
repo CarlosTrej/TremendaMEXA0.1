@@ -73,9 +73,9 @@ form.addEventListener("submit",function(e){
 
 function alertModal(text){
     Swal.fire({
-        title: 'Alerta',
+        title: 'Registro exitoso',
         text: `¡${text}!`,
-        icon: 'warning',
+        icon: 'success',
         cancelButtonColor: '#d33',
         cancelButtonText: "Okay"
         
