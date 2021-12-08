@@ -60,17 +60,17 @@ function initSesion(idsesion){
           </div>
         </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-2 my-lg-0" id="formBlack" style="color: black;">
       
       <ul class="nav-item active dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:xlarge;">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:xlarge; color: black;">
             Bienvenido
            </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="nav-link" type="submit" id="navbarScrollingDropdow" href="./addcard.html?usuarioactivo=${idsesion}" style="font-size:large;">
+            <a class="nav-link" type="submit" id="navbarScrollingDropdow" href="./addcard.html?usuarioactivo=${idsesion}" style="font-size:large; color: black;">
              Agregar Producto
             </a>
-            <a class="nav-link" type="click" id="cerrarsesion" style="font-size:large;">
+            <a class="nav-link" type="click" id="cerrarsesion" style="font-size:large; color: black;">
             Cerrar Sesión
            </a>
           </div>
