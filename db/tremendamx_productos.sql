@@ -25,30 +25,30 @@ DROP TABLE IF EXISTS `productos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `productos` (
-  `idProductos` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) NOT NULL,
   `precio` decimal(10,0) NOT NULL DEFAULT '0',
   `descripcion` varchar(500) DEFAULT NULL,
-  `tamaño` varchar(45) NOT NULL,
+  `presentacion` varchar(45) NOT NULL,
   `img` varchar(2000) NOT NULL,
   `categorias_idcategorias` int(11) NOT NULL,
   `marca_idmarca` int(11) NOT NULL,
-  PRIMARY KEY (`idProductos`,`categorias_idcategorias`,`marca_idmarca`),
+  PRIMARY KEY (`id`,`categorias_idcategorias`,`marca_idmarca`),
   KEY `fk_Productos_Categorias1_idx` (`categorias_idcategorias`),
   KEY `fk_Productos_Marca1_idx` (`marca_idmarca`),
-  CONSTRAINT `fk_Productos_Categorias1` FOREIGN KEY (`categorias_idcategorias`) REFERENCES `categorias` (`idcategorias`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `fk_Productos_Marca1` FOREIGN KEY (`marca_idmarca`) REFERENCES `marca` (`idMarca`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+  CONSTRAINT `fk_Productos_Categorias1` FOREIGN KEY (`categorias_idcategorias`) REFERENCES `categorias` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `fk_Productos_Marca1` FOREIGN KEY (`marca_idmarca`) REFERENCES `marca` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
 -- Dumping data for table `productos`
 --
--- ORDER BY:  `idProductos`,`categorias_idcategorias`,`marca_idmarca`
+-- ORDER BY:  `id`,`categorias_idcategorias`,`marca_idmarca`
 
 LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
-INSERT INTO `productos` VALUES (10,'CORTE BÁSICO',550,'En mezclilla y/o loneta','S,M,L','https://res.cloudinary.com/rookiesquad/image/upload/v1636498769/Imagen5_mipxbl.png',1,1),(11,'CORTE INDUSTRIAL',950,'Tirantes en cinta textil industrial desmontables con','S,M,L','https://res.cloudinary.com/rookiesquad/image/upload/v1636498737/Imagen4_efjfjj.png',1,1),(12,'CORTE DE LUJO',1350,'Tirantes en piel de res y estabilizador trasero en cuero de','S,M,L','https://res.cloudinary.com/rookiesquad/image/upload/v1636498884/Imagen11_yttulg.png',1,1),(13,'CORTE PREMIUM',1900,'Tirantes en piel de res y estabilizador trasero en cuero de','S,M,L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/75616346_105189720829377_7502509940443354170_n_ew64js.jpg',1,1),(14,'CORTE COMPLETO EN PIEL DE RES',2500,'En piel genuina de res, cortada y cosida a mano.','S,M,L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574591/138530577_1326582484389676_6441071687567104179_n_wht8me.jpg',1,1),(15,'Bolsa',300,'Realizadas en mezclilla industrial color azul índigo, con correas y aplicaciones en piel de res color tabaco','30x20cm','https://res.cloudinary.com/rookiesquad/image/upload/v1636498751/bolsas_2_e6vu2l.png',2,1),(16,'Cáfe',180,'Hecho con el mejor café tostado, originario de Chiapas','500grs','https://res.cloudinary.com/rookiesquad/image/upload/v1636499945/245057633_1452576331790613_1123708741388528244_n_mrncqw.jpg',3,2),(17,'Cáfe CH',110,'Hecho con el mejor café tostado, originario de Chiapas','300grs','https://res.cloudinary.com/rookiesquad/image/upload/v1636499945/253144600_900585757496627_3781751932014693_n_a6lhjy.jpg',3,2);
+INSERT INTO `productos` VALUES (1,'Mandil corte de Lujo',2000,'Mandil elaborado en piel genuina de res. Cortado, ensamblado y cosido totalmente a mano.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/53354671_579503035870606_6664139277111411912_n_begudt.jpg',1,1),(2,'Mandil corte de Lujo',1600,'Mandiles en piel de res hechos completamente a mano.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574591/138530577_1326582484389676_6441071687567104179_n_wht8me.jpg',1,1),(3,'Mandil corte de Lujo',1600,'Corte de lujo en loneta color oro viejo y bolsas color chocolate, aplicaciones desmontables en piel color tabaco, tirantes desmontables y ajustables con estabilizador de cuero hechos a mano.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/75616346_105189720829377_7502509940443354170_n_ew64js.jpg',1,1),(4,'Mandil corte de Lujo',1450,'Con tirantes en cuero de res y estabilizador trasero elaborados completamente a mano, etiqueta de cuero personalizada con nombre, ambas desmontables para su mayor cuidado y durabilidad.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/59771119_129001591615867_4798543424333610055_n_kjumpx.jpg',1,1),(5,'Mandil corte Industrial',1350,'En loneta sublimada con una hermosa imagen que ella eligió y fondo de mezclilla industrial color negro. Bolsas en piel de res cosidas a mano y etiqueta de cuero de res con su nombre, ambas son desmontables.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636498659/mandil_tremenda_mexa_vrxkcz.png',1,1),(6,'Mandil corte Industrial',950,'En loneta obscura sublimada y tirantes textiles fijos al mandil, personalizado con logo.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636574590/71189068_673387299850155_4273578602593480175_n_iauq2i.jpg',1,1),(7,'Mandil corte Industrial',1100,'Mandil en mezclilla industrial color negro Obsidiana y fondo de gabardina, con bolsa oculta con solapa y detalles en mezclilla color rosa. Con etiqueta de cuero y porta trapos en piel desmontables. Tirantes en cinta textil ajustables con estabilizador trasero hecho a mano.','S, M, L','https://res.cloudinary.com/rookiesquad/image/upload/v1636498737/Imagen4_efjfjj.png',1,1),(8,'Bolsa',300,'Realizadas en mezclilla industrial color azul con correas y aplicaciones en piel de res.','30x20cm','https://res.cloudinary.com/rookiesquad/image/upload/v1636498751/bolsas_2_e6vu2l.png',2,1),(9,'Bolsa',300,'Realizadas en mezclilla industrial color azul índigo, con correas y aplicaciones en piel de res color tabaco, con etiqueta de cuero marcada ','30x20cm','https://res.cloudinary.com/rookiesquad/image/upload/v1636498649/tx13_hozc9e.png',2,1),(10,'Café Orgánico',180,'Hecho con el mejor café tostado, originario de Chiapas','500grs','https://res.cloudinary.com/rookiesquad/image/upload/v1636499945/245057633_1452576331790613_1123708741388528244_n_mrncqw.jpg',3,2),(11,'Café Tostado Orgánico',300,'Hecho con el mejor café tostado, originario de Chiapas','500grs','https://res.cloudinary.com/rookiesquad/image/upload/v1636499945/253144600_900585757496627_3781751932014693_n_a6lhjy.jpg',3,2),(30,'Café Caracol Purpura',250,'Hecho con el mejor café tostado, originario de Oaxaca','500grs','https://res.cloudinary.com/rookiesquad/image/upload/v1636499945/253144600_900585757496627_3781751932014693_n_a6lhjy.jpg',3,2);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -61,4 +61,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-30 23:46:52
+-- Dump completed on 2021-12-04 20:44:10
