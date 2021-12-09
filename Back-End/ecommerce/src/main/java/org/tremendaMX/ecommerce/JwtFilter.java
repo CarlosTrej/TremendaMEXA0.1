@@ -18,6 +18,7 @@ import io.jsonwebtoken.SignatureException;
 
 public class JwtFilter extends GenericFilterBean{
 
+	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException{
 		
 		HttpServletRequest httpServletRequest = (HttpServletRequest) request;
@@ -25,7 +26,7 @@ public class JwtFilter extends GenericFilterBean{
 		
 		String authHeader = httpServletRequest.getHeader("Authorization");
 		
-		 if ( (httpServletRequest.getMethod().equals("POST")) ||
+		 if ( 
 	    		  (httpServletRequest.getMethod().equals("PUT"))||
 	    		  (httpServletRequest.getMethod().equals("DELETE"))||
 	    		  (httpServletRequest.getMethod().equals("GET")) ) {
@@ -40,8 +41,9 @@ public class JwtFilter extends GenericFilterBean{
 	            }  catch ( SignatureException | MalformedJwtException e ) {
 	                throw new ServletException( "2. Invalid Token!" );
 	            }//catch
-	    	  chain.doFilter(httpServletRequest, httpServletResponse);	
+	    	  
 	      }//POST - PUT - DELETE - GET
+		 chain.doFilter(httpServletRequest, httpServletResponse);	
 		
 	}//doFilter
 	
