@@ -5,9 +5,11 @@ import java.util.Optional;
 
 import javax.transaction.Transactional;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tremendaMX.ecommerce.model.usuarios;
+import org.tremendaMX.utils.SHAUtil;
 
 @Service
 public class usuariosservice {
@@ -44,56 +46,31 @@ public class usuariosservice {
 	
 	
 	public void addUser (usuarios usuario) {
-		Optional<usuarios> prodByName=usuariosRepository.findByName(usuario.getNombre());
-		if( prodByName.isPresent()) {
-			throw new IllegalStateException("El Usuario con el nombre [" + usuario.getNombre() + "] ya existe.");
+		Optional<usuarios> prodByEmail=usuariosRepository.findByEmail(usuario.getCorreo());
+		if( prodByEmail.isPresent()) {
+			throw new IllegalStateException("El Usuario con el correo [" + usuario.getCorreo() + "] ya existe.");
 		}//isPresent
 		usuariosRepository.save(usuario);
 	}//addUser
 	
 	
 	@Transactional
-	public void updateUser(Long idusuarios, String nombre, String apellido,
-			String correo, String password, String telefono) {
+	public void updateUser(Long idusuarios, String newpassword, String currentpassword) {
 		
 		usuarios usuario = usuariosRepository.findById(idusuarios).
 				orElseThrow(
 						()->new IllegalStateException("El Usuario con el id [" + idusuarios + "] no existe."));
 		
 		
-		//validamos_nombre
-		if(nombre != null)
-			if((!nombre.isEmpty()) && (!nombre.equals(usuario.getNombre()))) {
-				usuario.setNombre(nombre);
-			}//ifNombre
+		if(currentpassword == null || newpassword ==null) {
+			throw new IllegalStateException("El usuario con el id ["+idusuarios+"] no existe");
+		}//ifPassword!=null
 		
-		
-		//validamos_apellido
-		if(apellido != null)
-			if((!apellido.isEmpty()) && (!apellido.equals(usuario.getApellido()))) {
-				usuario.setApellido(apellido);
-			}//ifApellido
-		
-		//validamos_correo
-		if(correo != null)
-			if((!correo.isEmpty()) && (!correo.equals(usuario.getCorreo()))) {
-				usuario.setCorreo(correo);
-			}//ifCorreo
-		
-		
-		//validamosPassword
-		if(password != null)
-			if((!password.isEmpty()) && (!password.equals(usuario.getPassword()))) {
-				usuario.setPassword(password);
-			}//ifPassword
-		
-		
-		//validamosTelefono
-		if(telefono != null)
-			if((!telefono.isEmpty()) && (!telefono.equals(usuario.getTelefono()))) {
-				usuario.setTelefono(telefono);
-			}//ifTelefono
-		
+		if(! SHAUtil.verifyHash(currentpassword, usuario.getPassword())) {
+			throw new IllegalStateException("La contraseña del usuario con el id ["+idusuarios+"] no coincide");
+		}//ifVerifyHash
+		//ValidamosElpasswordActualConElNuevo
+		usuario.setPassword(newpassword);
 	}//updateUser
 	
 	

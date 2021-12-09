@@ -48,20 +48,26 @@ form.addEventListener("submit",function(e){
                 alertModal("Las contraseñas no son iguales");
                 passwordEq.value="";
             }else{
-                obtener_localStorage();
-                guadar_localStorage();
-                new Swal({
-                     icon: 'success',
-                     title: 'Success...',
-                     text: 'Guardado exitosamente!',
-               
-                })
-                    
-                /*  guardaUs(); */
-                /* guadar_localStorage(); */
-                clearInputs(name,email,apellido,password,passwordEq);
-                alertModal("Felicidades");
 
+                fetch('http://127.0.0.1:8085/api/usuarios/',{
+                    method: 'POST',
+                    body: JSON.stringify({
+                        "nombre": name.value,
+                        "apellido": apellido.value,
+                        "correo": email.value,
+                        "password": password.value,
+                        
+                    }),
+                    headers: {
+                          'Content-type': 'application/json'
+                      }
+                    }).then(resp => {
+                      validTrue();
+                      clearInputs(name,email,apellido,password,passwordEq);
+                    }).catch(function(error){
+                      console.log(error);
+                    })
+                    
             }/* newUser */
                 
             }/*Evalua Contraseñas*/
@@ -69,16 +75,23 @@ form.addEventListener("submit",function(e){
         }/*contraseña y confirmacion*/
 });/* form.addEventListener */
     
-
-
+function validTrue(){
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: '¡Felicidades! Registro exitoso.',
+        showConfirmButton: false,
+        timer: 1500
+      })
+}/*  validTrue */
+  
 function alertModal(text){
     Swal.fire({
-        title: 'Registro exitoso',
+        title: 'Alerta',
         text: `¡${text}!`,
-        icon: 'success',
+        icon: 'warning',
         cancelButtonColor: '#d33',
         cancelButtonText: "Okay"
-        
       })
 }/* function alertModal */
 
@@ -92,58 +105,4 @@ function clearInputs(name,email,apellido,password,passwordEq){
     /* phone.classList.remove("is-invalid"); */
 }/* function clearInputs */
 
-function guadar_localStorage() {
-    //Obtenemos los valores del html.
-    let id = document.getElementById("inputEmail").value;
-    let clave = document.getElementById("inputPassword").value;
 
-    //Si el id existe en el localStorage vamos a comprobar la clave
-    if (id in localStorage) {
-        //Si la clave coincide le permitimos el acceso.
-        if (clave == localStorage.getItem(id)) {
-            location.href="newregister.html";
-        }
-        //Si la clave no concuerda, le informamos de que no es correcta.
-        else {
-            alert("Su contraseña es incorrecta.");
-        }
-    }
-    else { 
-        //Si el id no se encuentra, le preguntamos si quiere agregarlo.
-        let answer = prompt("Su Id y pass no se encuentran registrado desea guardarlos (S/N)");
-            if (answer == 's' || answer == 'S') {
-                localStorage.setItem(id,clave);
-                document.getElementById("inputEmail").value = "";
-                document.getElementById("inputPassword").value = "";
-            }
-    }
-}
-function obtener_localStorage(){
-    if(localStorage.getItem("usuario")){
-        //existe un registro en el localStorage
-        let newUser=JSON.parse(localStorage.getItem("usuario"));
-        console.log("usuario");
-    }else{
-        console.log("no hay ");
-        /* localStorage.setItem("newUser",JSON.stringify()) */
-        guadar_localStorage();
-        console.log("se guardo");
-    }
-}
-function guadar_localStorage(){
-    let nameUs = document.getElementById("inputName").value;
-    let apellidoUS = document.getElementById("inputApellido").value;
-    let emailUs = document.getElementById("inputEmail").value;
-    let passwordUs = document.getElementById("inputPassword").value;
-
-    let usuario={
-        "nombre":nameUs,
-        "Apellido":apellidoUS,
-        "Email":emailUs,
-        "Password":passwordUs
-    }
-    let listaUsuario = JSON.parse(localStorage.getItem("usuario")) || [];
-    listaUsuario.push(usuario);
-    let listaUsuarioJSON = JSON.stringify(listaUsuario);
-    localStorage.setItem("usuario",listaUsuarioJSON);
-}

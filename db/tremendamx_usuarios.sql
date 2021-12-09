@@ -29,7 +29,7 @@ CREATE TABLE `usuarios` (
   `nombre` varchar(45) NOT NULL,
   `apellido` varchar(45) NOT NULL,
   `correo` varchar(45) NOT NULL,
-  `password` varchar(45) NOT NULL,
+  `password` varchar(450) NOT NULL,
   `telefono` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idusuarios`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
