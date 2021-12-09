@@ -15,8 +15,25 @@
    
   }
 
-#añadir{
+#añadir {
     color:#FEFCF7/* #E9C9B2 */;
     font-weight:bold;
     background-color: black;
+}
+
+#upload_widget{
+
+  color:#FEFCF7;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  background-color: black;
+  line-height: 1.5;
+  font-weight: bold;
+  width: 100%;
+  text-rendering: auto;
+  font-size: medium;
+  
+
+  
 }
