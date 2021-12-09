@@ -32,10 +32,11 @@
     padding-right: 25px;
     font-weight: bold;
 }
+
 .dropdown-toggle::after{
     color: black;
 }
 
 #formBlack{
     color:black;
-}
+
