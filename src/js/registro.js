@@ -59,7 +59,8 @@ form.addEventListener("submit",function(e){
                         
                     }),
                     headers: {
-                          'Content-type': 'application/json'
+                          'Content-Type': 'application/json',
+                          'Access-Control-Allow-Origin': '*' 
                       }
                     }).then(resp => {
                       validTrue();
