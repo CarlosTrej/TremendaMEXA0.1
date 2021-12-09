@@ -1,6 +1,6 @@
 .bg-light{
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     padding-left: 25px;
     padding-right: 25px; 
@@ -39,4 +39,4 @@
 
 #formBlack{
     color:black;
-
+}
