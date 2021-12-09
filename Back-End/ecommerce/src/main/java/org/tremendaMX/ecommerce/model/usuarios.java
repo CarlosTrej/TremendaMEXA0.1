@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.tremendaMX.utils.SHAUtil;
+
 @Entity
 @Table(name = "usuarios")
 public class usuarios {
@@ -27,7 +29,7 @@ public class usuarios {
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.correo = correo;
-		this.password = password;
+		this.setPassword(password);
 		this.telefono = telefono;
 	}//Constructor
 
@@ -70,7 +72,7 @@ public class usuarios {
 	}//getPassword
 
 	public void setPassword(String password) {
-		this.password = password;
+		this.password = SHAUtil.createHash(password);
 	}//setPassword
 
 	public String getTelefono() {

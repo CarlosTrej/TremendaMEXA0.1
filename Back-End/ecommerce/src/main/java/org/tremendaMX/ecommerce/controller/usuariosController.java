@@ -3,6 +3,7 @@ package org.tremendaMX.ecommerce.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,6 +18,7 @@ import org.tremendaMX.ecommerce.model.usuarios;
 
 @RestController
 @RequestMapping("api/usuarios")
+@CrossOrigin("*")
 public class usuariosController {
 
 	private final usuariosservice usuariosservice;
@@ -53,12 +55,9 @@ public class usuariosController {
 	
 	@PutMapping(path = "{idusuarios}")
 	public void updateUser(@PathVariable("idusuarios") Long idusuarios,
-			@RequestParam(required = false) String nombre,
-			@RequestParam(required = false) String apellido,
-			@RequestParam(required = false) String correo,
-			@RequestParam(required = false) String password,
-			@RequestParam(required = false) String telefono) {
-		usuariosservice.updateUser(idusuarios, nombre, apellido, correo, password, telefono);
+			@RequestParam(required = true) String currentpassword,
+			@RequestParam(required = true) String newpassword) {
+		usuariosservice.updateUser(idusuarios, newpassword, currentpassword);
 		
 	}//updateUser
 	
