@@ -17,7 +17,7 @@ import org.tremendaMX.ecommerce.usuariosservice;
 import org.tremendaMX.ecommerce.model.usuarios;
 
 @RestController
-@RequestMapping("api/usuarios")
+@RequestMapping("/api/usuarios/")
 @CrossOrigin("*")
 public class usuariosController {
 
@@ -47,7 +47,7 @@ public class usuariosController {
 	}//deleteUser
 	
 	
-	@PostMapping
+	@PostMapping 
 	public void addUser(@RequestBody usuarios usuario) {
 		usuariosservice.addUser(usuario);
 	}//addUser
