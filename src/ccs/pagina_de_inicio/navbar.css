@@ -32,3 +32,11 @@
     padding-right: 25px;
     font-weight: bold;
 }
+
+.dropdown-toggle::after{
+    color: black;
+}
+/*.navbar-light .navbar-nav .nav-link{
+    font-weight: bold;
+    color: black;
+}*/

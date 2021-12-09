@@ -65,7 +65,7 @@ function initSesion(idsesion){
         <form class="form-inline my-2 my-lg-0">
           
           <ul class="nav-item active dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:xlarge;">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size:xlarge; color:black;">
             	  Bienvenido
                </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
