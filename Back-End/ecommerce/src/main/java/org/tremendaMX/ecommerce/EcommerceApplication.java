@@ -12,7 +12,6 @@ public class EcommerceApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(EcommerceApplication.class, args);
 	}//main
-	
 	@Bean
 	public FilterRegistrationBean<JwtFilter> jwtFilter(){
 		FilterRegistrationBean<JwtFilter> registrationBean =
@@ -22,6 +21,7 @@ public class EcommerceApplication {
 		registrationBean.addUrlPatterns("/api/usuarios/*");
 		return registrationBean;
 	}
+	
 	
 }//EcommerceApplication
 
