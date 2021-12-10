@@ -83,6 +83,11 @@ public class usuarios {
 		this.telefono = telefono;
 	}//setTelefono
 	
+	 public void setClearPassword(String password) {
+		  this.password=password;
+	  }//setClearPassword
+	
+	
 
 
 }//usuarios
