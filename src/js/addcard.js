@@ -153,7 +153,7 @@ form.addEventListener("submit",function(e){
                       alertModal("Verifíca el precio del producto");
                   }else{
                     if(cloudImage == null){
-                        alertModal("Se necesita una imagen.")
+                        /* alertModal("Se necesita una imagen.") */
                     }else{
 
                       fetch('http://127.0.0.1:8085/api/productos/',{

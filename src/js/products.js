@@ -117,6 +117,7 @@ const endpoint = "http://127.0.0.1:8085/api/productos/";
 const productosPromise = fetch(endpoint);
 let itemsProducts= document.getElementById("list-products");
 
+
 productosPromise
 .then(function(data){
   return data.json();
@@ -124,9 +125,7 @@ productosPromise
   addItem(data)
 }).catch(function(error){
   console.log(error);
-  /* como se trabaja enJSON, se necesita convertirlo en algo que yo pueda interpretar */
 })/* productosPromise */
-
 
 function addItem(products){
   products.forEach(function(item){
