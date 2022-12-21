@@ -12,7 +12,6 @@ form.addEventListener("submit",function(e){
     let password = document.getElementById("inputPassword");
     let passwordEq = document.getElementById("inputPasswordEq");
     /* parseamos el dato phone a number 
-    let phone_number=parseInt(phone.value,10);*/
     
     /* validacion del campo nombre */
     if(name.value.length == 0){

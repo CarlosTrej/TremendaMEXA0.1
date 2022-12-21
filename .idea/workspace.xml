@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8232139c-97b0-4d04-ac70-1a3cf23b27da" name="Changes" comment="" />
+    <list default="true" id="8232139c-97b0-4d04-ac70-1a3cf23b27da" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/ccs/pagina_de_inicio/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ccs/pagina_de_inicio/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/addcard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/addcard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/registro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/registro.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
